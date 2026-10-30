@@ -1,0 +1,56 @@
+:root{
+  --mekong:#0B3C5D; --mekong-2:#12537F; --saffron:#F2A900; --road:#C8372D; --paddy:#2E8B57;
+  --paper:#EAF0F4; --card:#fff; --ink:#14212B; --muted:#5E7080; --line:#D5DEE5;
+}
+body{font-family:'Noto Sans Lao','Sora',system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:.95rem}
+h1,h2,h3,.brand,.plate,.stat .n{font-family:'Sora','Noto Sans Lao',sans-serif}
+a{color:var(--mekong-2)}
+.btn-primary{--bs-btn-bg:var(--mekong);--bs-btn-border-color:var(--mekong);--bs-btn-hover-bg:var(--mekong-2);--bs-btn-hover-border-color:var(--mekong-2);--bs-btn-active-bg:var(--mekong-2)}
+.btn-warning{--bs-btn-bg:var(--saffron);--bs-btn-border-color:var(--saffron);--bs-btn-color:#2A1D00}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:2px}
+
+/* ---------- ເວັບລູກຄ້າ ---------- */
+.site-nav{background:var(--mekong)}
+.site-nav .nav-link{color:#CFE0EC}.site-nav .nav-link.active,.site-nav .nav-link:hover{color:#fff}
+.brand{color:#fff!important;font-weight:700;letter-spacing:.2px}
+.brand .bi{color:var(--saffron)}
+.hero{background:linear-gradient(180deg,var(--mekong) 0,var(--mekong) 62%,var(--paper) 62%);padding:3rem 0 0}
+.hero h1{color:#fff;font-weight:700;font-size:clamp(1.8rem,4.5vw,2.9rem);max-width:15ch;line-height:1.25}
+.hero p{color:#BFD3E1;max-width:44ch}
+.ticket{background:var(--card);border-radius:14px;padding:1.25rem;box-shadow:0 14px 30px -18px rgba(11,60,93,.55);border-top:6px solid var(--saffron)}
+.vcard{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;height:100%;display:flex;flex-direction:column}
+.vcard .pic{aspect-ratio:16/10;background:#DCE6ED;display:flex;align-items:center;justify-content:center;color:#8EA3B3;font-size:3rem;overflow:hidden}
+.vcard .pic img{width:100%;height:100%;object-fit:cover}
+.vcard .body{padding:1rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.plate{display:inline-block;border:2px solid var(--ink);border-radius:5px;padding:0 .5rem;font-size:.8rem;font-weight:700;letter-spacing:1px;background:#fff;width:fit-content}
+.price{font-family:'Sora',sans-serif;font-weight:700;color:var(--mekong);font-size:1.15rem}
+.price small{font-family:'Noto Sans Lao';font-weight:400;color:var(--muted)}
+.specs{color:var(--muted);font-size:.85rem;display:flex;gap:.9rem;flex-wrap:wrap}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+.site-foot{color:var(--muted);border-top:1px solid var(--line);font-size:.85rem}
+
+/* ---------- ຫຼັງບ້ານ ---------- */
+.adm-wrap{display:flex;min-height:100vh}
+.adm-side{width:248px;background:var(--mekong);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;flex-shrink:0}
+.adm-side .nav-link{color:#CFE0EC;border-radius:8px;padding:.6rem .8rem;display:flex;gap:.6rem;align-items:center}
+.adm-side .nav-link:hover{background:rgba(255,255,255,.08);color:#fff}
+.adm-side .nav-link.active{background:var(--saffron);color:#2A1D00;font-weight:500}
+.adm-main{flex:1;min-width:0}
+.adm-top{background:#fff;border-bottom:1px solid var(--line);padding:.7rem 1.25rem;position:sticky;top:0;z-index:20}
+.stat{background:#fff;border:1px solid var(--line);border-left:5px solid var(--mekong);border-radius:8px;padding:1rem}
+.stat .n{font-size:1.7rem;font-weight:700;line-height:1.1}
+.stat.ok{border-left-color:var(--paddy)}.stat.warn{border-left-color:var(--saffron)}.stat.bad{border-left-color:var(--road)}
+.table thead th{background:#F3F7FA;font-weight:500;white-space:nowrap}
+.notif-menu{width:340px;max-height:420px;overflow:auto}
+.notif-item{display:block;padding:.6rem .9rem;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.notif-item.unread{background:#FFF8E5}
+.notif-item small{color:var(--muted)}
+@media(max-width:991px){
+  .adm-side{position:fixed;left:-260px;z-index:30;transition:left .2s}
+  .adm-side.open{left:0}
+}
+@media print{.adm-side,.adm-top,.no-print{display:none!important}body{background:#fff}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---------- ໃບບິນ ---------- */
+.invoice{max-width:820px;margin:auto;background:#fff;padding:2rem;border:1px solid var(--line)}
